@@ -10,6 +10,7 @@ import { ViewordersComponent } from './comps/vieworders/vieworders.component';
 import { SettingsComponent } from './comps/settings/settings.component';
 import { ProfileComponent } from './comps/profile/profile.component';
 const routes: Routes = [
+  {path: '', redirectTo:'home' , pathMatch: 'full'},
   {path: 'topnav', component: TopNavComponent},
   {path: 'bottomnav', component: BottomNavComponent},
   {path: 'home', component: HomeComponent},
