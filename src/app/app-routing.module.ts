@@ -8,7 +8,7 @@ import { LoginComponent } from './comps/login/login.component';
 import { OrdersComponent } from './comps/orders/orders.component';
 import { ViewordersComponent } from './comps/vieworders/vieworders.component';
 import { SettingsComponent } from './comps/settings/settings.component';
-
+import { ProfileComponent } from './comps/profile/profile.component';
 const routes: Routes = [
   {path: 'topnav', component: TopNavComponent},
   {path: 'bottomnav', component: BottomNavComponent},
@@ -18,6 +18,8 @@ const routes: Routes = [
   {path: 'orders', component: OrdersComponent},
   {path: 'order', component: ViewordersComponent},
   {path: 'settings', component: SettingsComponent},
+  {path: 'profile', component: ProfileComponent},
+
 ];
 
 @NgModule({
