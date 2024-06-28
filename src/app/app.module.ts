@@ -9,6 +9,10 @@ import { OrdersComponent } from './comps/orders/orders.component';
 import { ViewordersComponent } from './comps/vieworders/vieworders.component';
 import { SettingsComponent } from './comps/settings/settings.component';
 import { MapComponent } from './comps/map/map.component';
+import { TopNavComponent } from './comps/top-nav/top-nav.component';
+import { BottomNavComponent } from './comps/bottom-nav/bottom-nav.component';
+import { RegisterComponent } from './comps/register/register.component';
+import { LoginComponent } from './comps/login/login.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { MapComponent } from './comps/map/map.component';
     OrdersComponent,
     ViewordersComponent,
     SettingsComponent,
-    MapComponent
+    MapComponent,
+    TopNavComponent,
+    BottomNavComponent,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
