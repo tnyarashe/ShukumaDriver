@@ -12,6 +12,7 @@ import { ProfileComponent } from './comps/profile/profile.component';
 import { DriverChatComponent } from './comps/chat/chat.component';
 
 const routes: Routes = [
+  {path: '', redirectTo:'home' , pathMatch: 'full'},
   {path: 'topnav', component: TopNavComponent},
   {path: 'bottomnav', component: BottomNavComponent},
   {path: 'home', component: HomeComponent},

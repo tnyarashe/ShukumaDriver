@@ -22,19 +22,17 @@ interface UserProfile {
 })
 
 export class ProfileComponent {
-  mockUserProfile: any = {
+  mockUserProfile = {
+    imageUrl: 'https://via.placeholder.com/150',
     firstName: 'John',
     lastName: 'Doe',
+    bio: 'This is a sample user profile.',
     email: 'john.doe@example.com',
-    phoneNumber: '+1234567890',
-    imageUrl: 'https://placeimg.com/150/150/people', 
-    bio: 'Driver.',
-    location: 'New York, USA',
-    age: 48,
-    idNumber: 1234567899,
-    vehicleType: 'CAR',
-    vehicleReg: 'ca123456',
-    status: true,
-
-  }
+    phoneNumber: '+27 21 123 4567',
+    age: 35,
+    idNumber: '12345678',
+    vehicleType: 'Toyota Corolla',
+    agvehicleRege: '2021-05-01',
+    location: '123 Main St, Philippi Village RSA'
+  };
 }

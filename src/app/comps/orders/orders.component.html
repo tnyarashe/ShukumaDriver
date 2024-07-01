@@ -1,1 +1,25 @@
-<p>orders works!</p>
+<app-top-nav></app-top-nav>
+<div class="p-1 flex flex-wrap items-center justify-center">
+    <div class="w-full max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700" >
+        <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700" *ngIf="allOrders.length > 0">
+            <li class="py-3 sm:py-4" *ngFor="let order of allOrders">
+                <div class="flex-shrink-0">
+                    <p>({{ order.id }})</p>
+                    <h3>Order #{{ order.orderNumber }}</h3> 
+                    <p>Created: {{ order.createdAt }}</p>
+                </div>
+ 
+                <ul>
+                    <a routerLink="/vieworder">
+                    <li *ngFor="let item of order.items">
+                        {{ item.name }} (x{{ item.quantity }}) - R{{ item.price.toFixed(2) }}
+                    </li>
+                    <p> Total: R{{ order.total }} </p>
+                    <button class="viewOrder-btn"> View Order</button>
+
+                    </a>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>

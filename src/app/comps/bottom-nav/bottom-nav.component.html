@@ -1,1 +1,30 @@
-<p>bottom-nav works!</p>
+<footer class="footer p-3 z-1000 bg-black text-violet-500 border-t border-violet-500 fixed bottom-0 w-full justify-around space-between">
+    <ul class="flex justify-around items-center sm:flex-col sm:items-start sm:space-y-4">
+      <li class="flex-1">
+        <a routerLink="/home" class="btn btn-ghost btn-circle w-full h-full flex justify-center items-center">
+          <div tabindex="0" role="button" class="p-2 hover:bg-violet-500 hover:text-black rounded-full w-full h-full flex justify-center items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+              <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5" />
+            </svg>
+          </div>
+        </a>
+      </li>
+      <li class="flex-1">
+        <a routerLink="/orders" class="btn btn-ghost btn-circle w-full h-full flex justify-center items-center">
+          <div tabindex="0" role="button" class="p-2 hover:bg-violet-500 hover:text-black rounded-full w-full h-full flex justify-center items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M19 4h-3V2h-2v2h-4V2H8v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2M5 20V7h14V6l.002 14z" />
+              <path fill="currentColor" d="M7 9h10v2H7zm0 4h5v2H7z" />
+            </svg>
+          </div>
+        </a>
+      </li>
+      <li class="flex-1">
+        <a routerLink="/profile" class="btn btn-ghost btn-circle avatar w-full h-full flex justify-center items-center">
+          <div tabindex="0" role="button" class="w-10 h-10 rounded-full hover:bg-violet-500 hover:text-black p-2 flex justify-center items-center">
+            <img alt="" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+          </div>
+        </a>
+      </li>
+    </ul>
+  </footer>
