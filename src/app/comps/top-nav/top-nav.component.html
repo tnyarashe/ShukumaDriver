@@ -1,12 +1,11 @@
-<div class="navbar bg-base-100 border-2">
-
-    <div class="flex-1 backArrow ">
+  <div class="navbar bg-base-100 border-2 bg-black text-white font-bold font-sans">
+    <div class="flex-1 backArrow">
       <a routerLink="/back" (click)="goBack()" class="btn btn-ghost text-xl">
         <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" viewBox="0 0 24 24">
-            <path fill="currentColor" d="m6.8 13l2.9 2.9q.275.275.275.7t-.275.7t-.7.275t-.7-.275l-4.6-4.6q-.15-.15-.213-.325T3.426 12t.063-.375t.212-.325l4.6-4.6q.275-.275.7-.275t.7.275t.275.7t-.275.7L6.8 11H20q.425 0 .713.288T21 12t-.288.713T20 13z" />
+          <path fill="currentColor" d="m6.8 13l2.9 2.9q.275.275.275.7t-.275.7t-.7.275t-.7-.275l-4.6-4.6q-.15-.15-.213-.325T3.426 12t.063-.375t.212-.325l4.6-4.6q.275-.275.7-.275t.7.275t.275.7t-.275.7L6.8 11H20q.425 0 .713.288T21 12t-.288.713T20 13z" />
         </svg>
       </a>
-      <h1 class="title">Shukuma</h1>
+      <h1 class="title relative inline-block text-violet-500 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-violet-500">Shukuma</h1>
     </div>
   
     <div class="flex-none">
@@ -22,7 +21,6 @@
         </div>
       </div>
       <div class="dropdown dropdown-end">
-  
         <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
           <li>
             <a class="justify-between">
@@ -36,4 +34,3 @@
       </div>
     </div>
   </div>
-  
