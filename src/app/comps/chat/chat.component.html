@@ -1,0 +1,35 @@
+<app-top-nav></app-top-nav>
+<!-- driver-chat.component.html -->
+<!-- chat.component.html -->
+<div class="chat-container bg-white shadow-lg rounded-lg overflow-hidden w-full h-full" #chatContainer>
+  <div class="px-4 py-3 bg-gray-100 border-b">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center">
+        <img class="w-10 h-10 rounded-full" src="https://randomuser.me/api/portraits/men/12.jpg" alt="Driver Avatar">
+        <div class="ml-3">
+          <h3 class="font-semibold text-gray-800">John Doe</h3>
+          <p class="text-gray-600 text-sm">Driver</p>
+        </div>
+      </div>
+      <div>
+        <button class="px-3 py-2 bg-gray-200 hover:bg-gray-300 rounded-full text-gray-600 text-sm">
+          Call
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="p-4 space-y-4 overflow-y-auto h-full" #conversation>
+    <div class="flex items-start" *ngFor="let message of messages">
+      <img class="w-8 h-8 rounded-full" [src]="message.avatar" alt="Avatar">
+      <div class="ml-3 p-3 rounded-lg max-w-md" [ngClass]="{'bg-gray-100': message.sender === 'driver', 'bg-blue-500 text-white': message.sender === 'client'}">
+        <p [ngClass]="{'text-gray-800': message.sender === 'driver', 'text-white': message.sender === 'client'}">{{ message.text }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="border-t p-4 flex items-center">
+    <input type="text" class="flex-1 border-gray-300 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Type your message..." [(ngModel)]="newMessage" (keyup.enter)="sendMessage()">
+    <button class="ml-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg" (click)="sendMessage()">
+      Send
+    </button>
+  </div>
+</div>
