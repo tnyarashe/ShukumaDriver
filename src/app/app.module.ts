@@ -13,7 +13,8 @@ import { TopNavComponent } from './comps/top-nav/top-nav.component';
 import { BottomNavComponent } from './comps/bottom-nav/bottom-nav.component';
 import { RegisterComponent } from './comps/register/register.component';
 import { LoginComponent } from './comps/login/login.component';
-import { ChatComponent } from './chat/chat.component';
+import { FormsModule } from '@angular/forms';
+import { DriverChatComponent } from './comps/chat/chat.component';
 
 @NgModule({
   declarations: [
@@ -28,11 +29,13 @@ import { ChatComponent } from './chat/chat.component';
     BottomNavComponent,
     RegisterComponent,
     LoginComponent,
-    ChatComponent
+    DriverChatComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
