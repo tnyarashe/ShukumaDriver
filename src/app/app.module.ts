@@ -13,6 +13,7 @@ import { TopNavComponent } from './comps/top-nav/top-nav.component';
 import { BottomNavComponent } from './comps/bottom-nav/bottom-nav.component';
 import { RegisterComponent } from './comps/register/register.component';
 import { LoginComponent } from './comps/login/login.component';
+import { ChatComponent } from './chat/chat.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { LoginComponent } from './comps/login/login.component';
     TopNavComponent,
     BottomNavComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
