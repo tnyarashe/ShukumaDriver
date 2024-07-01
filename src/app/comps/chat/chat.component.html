@@ -1,6 +1,7 @@
 <app-top-nav></app-top-nav>
 <!-- driver-chat.component.html -->
-<div class="bg-white shadow-lg rounded-lg overflow-hidden">
+<!-- chat.component.html -->
+<div class="chat-container bg-white shadow-lg rounded-lg overflow-hidden w-full h-full" #chatContainer>
   <div class="px-4 py-3 bg-gray-100 border-b">
     <div class="flex items-center justify-between">
       <div class="flex items-center">
@@ -17,7 +18,7 @@
       </div>
     </div>
   </div>
-  <div class="p-4 space-y-4 overflow-y-auto h-64" #conversation>
+  <div class="p-4 space-y-4 overflow-y-auto h-full" #conversation>
     <div class="flex items-start" *ngFor="let message of messages">
       <img class="w-8 h-8 rounded-full" [src]="message.avatar" alt="Avatar">
       <div class="ml-3 p-3 rounded-lg max-w-md" [ngClass]="{'bg-gray-100': message.sender === 'driver', 'bg-blue-500 text-white': message.sender === 'client'}">

@@ -13,7 +13,8 @@ interface Message {
   styleUrls: ['./chat.component.css']
 })
 export class DriverChatComponent {
-  @ViewChild('conversation', { static: false }) conversation: ElementRef | undefined;
+  @ViewChild('conversation', { static: false })
+  conversation!: ElementRef;
 
   messages: Message[] = [
     { sender: 'driver', text: 'Hi there, I\'m on my way and should be with you in about 5 minutes.', avatar: 'https://randomuser.me/api/portraits/men/12.jpg' },
@@ -23,6 +24,7 @@ export class DriverChatComponent {
   ];
 
   newMessage = '';
+  chatContainer: any;
 
   sendMessage() {
     if (this.newMessage.trim() !== '') {
@@ -32,13 +34,17 @@ export class DriverChatComponent {
         avatar: 'https://randomuser.me/api/portraits/women/12.jpg'
       });
       this.newMessage = '';
-      // this.scrollToBottom();
+      this.scrollToBottom();
     }
   }
-
+  scrollToBottom() {
+    if (this.chatContainer) {
+      this.chatContainer.nativeElement.scrollTop = this.chatContainer.nativeElement.scrollHeight;
+    }
   // scrollToBottom() {
   //   setTimeout(() => {
   //     this.conversation.nativeElement.scrollTop = this.conversation.nativeElement.scrollHeight;
   //   }, 100);
   // }
+}
 }
